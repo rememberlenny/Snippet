@@ -12,6 +12,14 @@
  *= require_tree .
  */
 
+.background{
+  background-image: url(image_path('maps/feast-hack-map.png')) !important;
+  background-size: cover !important;
+}
+
 .fr{
   float: right;
+}
+a.white{
+  color: white !important;
 }

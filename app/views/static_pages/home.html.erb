@@ -1,5 +1,15 @@
 
 <div class="main-hero">
-  <h1>StaticPages#home</h1>
-  <p>Find me in app/views/static_pages/home.html.erb</p>
+  <% if admin_user_signed_in? %>
+
+  <% else %>
+    <h1 style="font-size: 3em">Snippet</h1>
+    <h1 class="subheader">
+      One liner goes here.
+    </h1>
+    <p>
+     <%= link_to "Log in", new_admin_user_session_path, class: "button secondary large" %>
+     <%= link_to "Sign up", new_admin_user_registration_path, class: "button primary large white" %>
+    </p>
+  <% end %> 
 </div>
