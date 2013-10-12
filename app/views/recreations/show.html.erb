@@ -1,39 +1,44 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <br>
+  <div class="panel">
+    <p id="notice"><%= notice %></p>
+  </div>
+<% end %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @recreation.name %>
-</p>
+<div class="row">
+  <h1><%= @recreation.name %></h1>
+</div>
+<div class="row">
+  <div class="large-6 column">
+    <label>Address:</label>
+    <%= @recreation.address %>
+  </div>
+  <div class="large-6 column">
+    <label>Info:</label>
+    <%= @recreation.info %>
+  </div>
+</div>
+<div class="row">
+  <div class="large-6 column">
+    <label>Location:</label>
+    <%= @recreation.location %>
+  </div>
+  <div class="large-6 column">
+    <label>Audience:</label>
+    <%= @recreation.audience %>
+  </div>
+</div>
+<div class="row">
+  <div class="large-6 column">
+    <label>Days:</label>
+    <%= @recreation.days %>
+  </div>
+  <div class="large-6 column">
+    <label>Timeofday:</label>
+    <%= @recreation.timeOfDay %>
+  </div> 
+</div> 
 
-<p>
-  <strong>Location:</strong>
-  <%= @recreation.location %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @recreation.address %>
-</p>
-
-<p>
-  <strong>Audience:</strong>
-  <%= @recreation.audience %>
-</p>
-
-<p>
-  <strong>Info:</strong>
-  <%= @recreation.info %>
-</p>
-
-<p>
-  <strong>Days:</strong>
-  <%= @recreation.days %>
-</p>
-
-<p>
-  <strong>Timeofday:</strong>
-  <%= @recreation.timeOfDay %>
-</p>
 
 <%= link_to 'Edit', edit_recreation_path(@recreation) %> |
 <%= link_to 'Back', recreations_path %>

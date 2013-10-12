@@ -10,36 +10,39 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
+<div class="row">
+  <div class="large-6 column">
+    <label>Name:</label>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :location %><br>
+  <div class="large-6 column">
+    <label>Location:</label>
     <%= f.text_field :location %>
   </div>
-  <div class="field">
-    <%= f.label :address %><br>
+</div>
+<div class="row">
+  <div class="large-6 column">
+    <label>Address:</label>
     <%= f.text_field :address %>
   </div>
-  <div class="field">
-    <%= f.label :audience %><br>
-    <%= f.text_field :audience %>
-  </div>
-  <div class="field">
-    <%= f.label :info %><br>
+  <div class="large-6 column">
+    <label>Info:</label>
     <%= f.text_field :info %>
   </div>
-  <div class="field">
-    <%= f.label :days %><br>
+</div>
+<div class="row">
+  <div class="large-4 column">
+    <label>Audience:</label>
+    <%= f.text_field :audience %>
+  </div>
+  <div class="large-4 column">
+    <label>Days:</label>
     <%= f.text_field :days %>
   </div>
-  <div class="field">
-    <%= f.label :timeOfDay %><br>
+  <div class="large-4 column">
+    <label>Time of day:</label>
     <%= f.text_field :timeOfDay %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  </div> 
+</div> 
+
 <% end %>
