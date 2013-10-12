@@ -1,0 +1,45 @@
+<%= form_for(@recreation) do |f| %>
+  <% if @recreation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recreation.errors.count, "error") %> prohibited this recreation from being saved:</h2>
+
+      <ul>
+      <% @recreation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :audience %><br>
+    <%= f.text_field :audience %>
+  </div>
+  <div class="field">
+    <%= f.label :info %><br>
+    <%= f.text_field :info %>
+  </div>
+  <div class="field">
+    <%= f.label :days %><br>
+    <%= f.text_field :days %>
+  </div>
+  <div class="field">
+    <%= f.label :timeOfDay %><br>
+    <%= f.text_field :timeOfDay %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @recreation.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @recreation.location %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @recreation.address %>
+</p>
+
+<p>
+  <strong>Audience:</strong>
+  <%= @recreation.audience %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @recreation.info %>
+</p>
+
+<p>
+  <strong>Days:</strong>
+  <%= @recreation.days %>
+</p>
+
+<p>
+  <strong>Timeofday:</strong>
+  <%= @recreation.timeOfDay %>
+</p>
+
+<%= link_to 'Edit', edit_recreation_path(@recreation) %> |
+<%= link_to 'Back', recreations_path %>

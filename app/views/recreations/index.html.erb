@@ -1,0 +1,39 @@
+<h1>Listing recreations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Address</th>
+      <th>Audience</th>
+      <th>Info</th>
+      <th>Days</th>
+      <th>Timeofday</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recreations.each do |recreation| %>
+      <tr>
+        <td><%= recreation.name %></td>
+        <td><%= recreation.location %></td>
+        <td><%= recreation.address %></td>
+        <td><%= recreation.audience %></td>
+        <td><%= recreation.info %></td>
+        <td><%= recreation.days %></td>
+        <td><%= recreation.timeOfDay %></td>
+        <td><%= link_to 'Show', recreation %></td>
+        <td><%= link_to 'Edit', edit_recreation_path(recreation) %></td>
+        <td><%= link_to 'Destroy', recreation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recreation', new_recreation_path %>

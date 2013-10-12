@@ -1,4 +1,6 @@
 FeastHealth::Application.routes.draw do
+  resources :recreations
+
   resources :users
 
   root 'static_pages#home'
