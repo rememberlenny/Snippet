@@ -1,0 +1,35 @@
+<h1>Listing users in East Harlem</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th width="20%">Name</th>
+      <th width="20%">Phone</th>
+      <th width="20%">Recreation</th>
+      <th width="20%">Recipes</th>
+      <th width="20%">Coupon</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.firstname %> <%= user.lastname %></td>
+        <td><%= user.phoneNumber %></td>
+        <td><%= user.groupRecreation %></td>
+        <td><%= user.groupRecipe %></td>
+        <td><%= user.groupCoupon %></td>
+        <td><%= link_to 'Sh', user %></td>
+        <td><%= link_to 'Ed', edit_user_path(user) %></td>
+        <td><%= link_to 'De', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '[+] User', new_user_path %>

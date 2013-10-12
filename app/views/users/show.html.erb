@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h1>
+    <%= @user.firstname %> <%= @user.lastname %>
+  </h1>
+</p>
+
+<p>
+  <h4 class="subheader">Phone:</h4>
+  <%= @user.phoneNumber %>
+</p>
+
+<p>
+  <h4 class="subheader">Subscription group:</h4>
+  <strong>Recreation</strong>
+  <%= @user.groupRecreation %><br>
+  <strong>Recipe</strong>
+  <%= @user.groupRecipe %><br>
+  <strong>Coupon</strong>
+  <%= @user.groupCoupon %><br>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @user.userNote %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
