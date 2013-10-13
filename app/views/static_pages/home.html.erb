@@ -4,30 +4,166 @@
     <div class="row">
     <br>
       <div class="large-9 column">
-        <%= image_tag 'maps/feast-hack-map.png' %>
+        <%= image_tag 'maps/feast-hack-map.png', :class => "feast" %>
+        <%= image_tag 'maps/astoria.png', :class => "astoria" %>
+        <%= image_tag 'maps/bronx-group.png', :class => "bronx" %>
+        <%= image_tag 'maps/central-harlem.png', :class => "central" %>
+        <%= image_tag 'maps/east-harlem.png', :class => "east" %>
+        <%= image_tag 'maps/flushing.png', :class => "flushing" %>
+        <%= image_tag 'maps/greenich-village.png', :class => "greenich" %>
+        <%= image_tag 'maps/highbridge.png', :class => "highbridge" %>
+        <%= image_tag 'maps/jackson-heights.png', :class => "jackson" %>
+        <%= image_tag 'maps/lower-east-side.png', :class => "lower" %>
+        <%= image_tag 'maps/morningside-heights.png', :class => "morningside" %>
+        <%= image_tag 'maps/mott-haven.png', :class => "mott" %>
+        <%= image_tag 'maps/north-manhattan-group.png', :class => "north" %>
+        <%= image_tag 'maps/pelham-parkway.png', :class => "pelham" %>
+        <%= image_tag 'maps/queens-group.png', :class => "queens" %>
+        <%= image_tag 'maps/soundview.png', :class => "soundview" %>
+        <%= image_tag 'maps/south-manhattan-group.png', :class => "south" %>
+        <%= image_tag 'maps/sunnyside.png', :class => "sunnyside" %>
+        <%= image_tag 'maps/throgs-neck.png', :class => "throgs" %>
+        <%= image_tag 'maps/washington-heights.png', :class => "washington" %>
       </div>
-      <div class="large-3 column">
+      <style>
+        h5{
+          margin-bottom:0em;
+        }
+        .no-bullet li{
+          opacity:.6;
+        }        
+        .no-bullet li.EastHarlem{
+          opacity:1;
+          font-weight: bold;
+        }
+        .no-bullet li:hover{
+          background: #ccc;
+        }
+      </style>
+      <script>
+$('.').hover( function(){
+  $('.feast').show(); 
+}, function(){
+  $('.feast').hide(); 
+});
+$('.').hover( function(){
+  $('.astoria').show(); 
+}, function(){
+  $('.astoria').hide(); 
+});
+$('.').hover( function(){
+  $('.bronx').show(); 
+}, function(){
+  $('.bronx').hide(); 
+});
+$('.').hover( function(){
+  $('.central').show(); 
+}, function(){
+  $('.central').hide(); 
+});
+$('.').hover( function(){
+  $('.east').show(); 
+}, function(){
+  $('.east').hide(); 
+});
+$('.').hover( function(){
+  $('.flushing').show(); 
+}, function(){
+  $('.flushing').hide(); 
+});
+$('.').hover( function(){
+  $('.greenich').show(); 
+}, function(){
+  $('.greenich').hide(); 
+});
+$('.').hover( function(){
+  $('.highbridge').show(); 
+}, function(){
+  $('.highbridge').hide(); 
+});
+$('.').hover( function(){
+  $('.jackson').show(); 
+}, function(){
+  $('.jackson').hide(); 
+});
+$('.').hover( function(){
+  $('.lower').show(); 
+}, function(){
+  $('.lower').hide(); 
+});
+$('.').hover( function(){
+  $('.morningside').show(); 
+}, function(){
+  $('.morningside').hide(); 
+});
+$('.').hover( function(){
+  $('.mott').show(); 
+}, function(){
+  $('.mott').hide(); 
+});
+$('.').hover( function(){
+  $('.north').show(); 
+}, function(){
+  $('.north').hide(); 
+});
+$('.').hover( function(){
+  $('.pelham').show(); 
+}, function(){
+  $('.pelham').hide(); 
+});
+$('.').hover( function(){
+  $('.queens').show(); 
+}, function(){
+  $('.queens').hide(); 
+});
+$('.').hover( function(){
+  $('.soundview').show(); 
+}, function(){
+  $('.soundview').hide(); 
+});
+$('.').hover( function(){
+  $('.south').show(); 
+}, function(){
+  $('.south').hide(); 
+});
+$('.').hover( function(){
+  $('.sunnyside').show(); 
+}, function(){
+  $('.sunnyside').hide(); 
+});
+$('.').hover( function(){
+  $('.throgs').show(); 
+}, function(){
+  $('.throgs').hide(); 
+});
+$('.').hover( function(){
+  $('.washington').show(); 
+}, function(){
+  $('.washington').hide(); 
+});
+      </script>
+      <div class="large-3 column text-left">
         <h4>Select your region</h4>
-        <ul>
+        <ul class="text-left no-bullet">
           <li id="group"><h5>North Manhattan</h5></li>
-            <li>East Harlem</li>
-            <li>Central Harlem</li>
-            <li>Washington Heights</li>
-            <li>Morningside Heights</li>
-          <li id="group"><h5>South Manhattan</h5></li>
-            <li>Greenich Village / Financial District</li>
-            <li>Lower East Side / Chinatown</li>
-          <li id="group"><h5>Bronx</h5></li>
-            <li>Highbridge / South Concourse</li>
-            <li>Mott Haven / Hunts Point</li>
-            <li>Soundview / Parkway</li>
-            <li>Throg Neck / Co-Op City</li>
-            <li>Pelham Parkway</li>
-          <li id="group"><h5>Queens</h5></li>
-            <li>Astoria</li>
-            <li>Jackson Heights</li>
-            <li>Sunnyside / Woodside</li>
-            <li>Flushing / Whitestone</li>
+            <li class="EastHarlem">East Harlem</li>
+            <li class="CentralHarlem">Central Harlem</li>
+            <li class="WashingtonHeights">Washington Heights</li>
+            <li class="MorningsideHeights">Morningside Heights</li>
+          <li class="SouthManhattan" id="group"><h5>South Manhattan</h5></li>
+            <li class="FinancialDistrict">Greenich Village / Financial District</li>
+            <li class="Chinatown">Lower East Side / Chinatown</li>
+          <li class="Bronx</h5>" id="group"><h5>Bronx</h5></li>
+            <li class="Highbridge">Highbridge / South Concourse</li>
+            <li class="MottHaven">Mott Haven / Hunts Point</li>
+            <li class="Soundview">Soundview / Parkway</li>
+            <li class="Throg">Throg Neck / Co-Op City</li>
+            <li class="PelhamParkway">Pelham Parkway</li>
+          <li class="Queens</h5>" id="group"><h5>Queens</h5></li>
+            <li class="Astoria">Astoria</li>
+            <li class="JacksonHeights">Jackson Heights</li>
+            <li class="Sunnyside">Sunnyside / Woodside</li>
+            <li class="Flushing">Flushing / Whitestone</li>
         </ul>
       </div>
     </div>
@@ -38,21 +174,47 @@
     </script>
     <div class="row ">
       <div class="large-8 column large-centered">
-        <div class="large-6 column">
+        <div class="large-4 column">
           <%= image_tag "snipit.png" %>
         </div>
-        <div class="large-6 column fl">
+        <div class="large-8 column fl">
+        <br>
+        <br>
+        <br>
+        <br>
           <h1 style="font-size: 4em;
           margin-bottom: 0em;">Snipit</h1>
           <h1 class="subheader">
             Be there – even when you can’t. 
           </h1>
-          <%= link_to "Sign up", new_admin_user_registration_path, class: "button primary large white button-width" %>
-          <p class="subheader text-center">
-          Send your group text messages about new recipes, local events, discounts on healthy food or free fitness classes!
-          </p>
+          <%= link_to "Sign up", new_admin_user_registration_path, class: "button primary medium white button-width" %>
         </div>
       </div>
+    </div>
+          <hr style="visibility: hidden;">
+    <div class="row">
+    <div class="large-8 column large-centered">
+          
+          <h2 style="font-size:1.3em; color: #333;" class="subheader text-center">
+            Send your group text messages about new recipes, local events, discounts on healthy food or free fitness classes!
+          </h2>
+      <div class="large-4 column"><%= image_tag 'LINK-ICON.png', :class=> "height-same" %>
+          <h4 style="opacity: .8;">Connect</h4>
+          <h5 class="subheader">Show them you care with regular text messages.</h5>
+
+          </div>
+      <div class="large-4 column"><%= image_tag 'POST-IT-ICON.png', :class=> "height-same" %>
+          <h4 style="opacity: .8;">Customize</h4>
+          <h5 class="subheader">Send the right info at the right time.</h5>
+
+         </div>
+      <div class="large-4 column"> <%= image_tag 'MEGAPHONE-ICON.png', :class=> "height-same" %>
+          <h4 style="opacity: .8;">Coordinate</h4>
+          <h5 class="subheader">Share valuable tips across multiple channels.</h5></div>
+          <br><br><br>
+  <hr style="visibility: hidden;">
+      <%= link_to "Sign up now!", new_admin_user_registration_path, class: "button primary large white button-width" %>
+    </div>
     </div>
     <p>
       
