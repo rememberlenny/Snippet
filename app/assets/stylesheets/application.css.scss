@@ -19,7 +19,7 @@
 /*font-family: Georgia !important;*/
  }
 .background{
-  background-image: url(image_path('background.jpg')) !important;
+  background-image: url(image_path('background.jpg'));
   background-size: cover !important;
   padding-bottom: 2em;
   border-top: 8px solid rgb(148, 204, 203);

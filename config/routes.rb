@@ -2,7 +2,7 @@ FeastHealth::Application.routes.draw do
   
   resources :recipes
 
-  root 'static_pages#home'
+  root 'static_pages#help'
   
   devise_for :admin_users
   
@@ -10,15 +10,15 @@ FeastHealth::Application.routes.draw do
   resources :recreations
   resources :users
 
-  match '/home',    to: 'static_pages#home', via: 'get'
-  match '/help',    to: 'static_pages#help', via: 'get'
-  match '/signin',  to: 'static_pages#sign-in', via: 'get'
+  match '/coach',     to: 'static_pages#home',    via: 'get'
+  match '/',          to: 'static_pages#help',    via: 'get'
+  match '/signin',    to: 'static_pages#sign-in', via: 'get'
   
-  match '/textout/index', to: 'textout#index', via: 'get'
-  match '/voiceout', to: 'textout#makecall', via: 'get'
-  match '/textin', to: 'textout#textin', via: 'get'
-  match '/textout', to: 'textout#sendtext', via: 'get'
-  match '/voicein', to: 'textout#voicein', via: 'get'
+  match '/textout/index', to: 'textout#index',    via: 'get'
+  match '/voiceout',      to: 'textout#makecall', via: 'get'
+  match '/textin',        to: 'textout#textin',   via: 'get'
+  match '/textout',       to: 'textout#sendtext', via: 'get'
+  match '/voicein',       to: 'textout#voicein',  via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

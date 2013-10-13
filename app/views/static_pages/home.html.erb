@@ -34,6 +34,7 @@
           left: 0px;
           top: 0;
           visibility: hidden;
+          opacity: .8;
         }
         .list-image.visibler{
           visibility: visible;
@@ -57,7 +58,7 @@
         <h4>Select your region</h4>
         <ul class="text-left no-bullet">
           <li id="group" class="list-north-manhattan"><h5>North Manhattan</h5> </li>
-            <li class=" list-eastharlem">East Harlem </li>
+            <li class=" list-eastharlem"><%= link_to "East Harlem", users_path %></li>
             <li class=" list-centralharlem">Central Harlem (Coming Soon)</li>
             <li class=" list-washingtonheights">Washington Heights (Coming Soon)</li>
             <li class=" list-morningsideheights">Morningside Heights (Coming Soon)</li>
@@ -80,10 +81,21 @@
     </div>
     <br>
   <% else %>
+    <style>
+      .background{
+        margin-bottom: 0em;
+        padding-bottom: 0em;
+        border-bottom: 0px solid rgb(204, 204, 204);
+      }
+      .row .row{
+                margin-left: -1.375em;
+        margin-right: -1.375em;
+      }
+    </style>
     <script>
       $('.white-bg').removeClass('white-bg');
     </script>
-    <div class="row ">
+    <div class="row">
       <div class="large-8 column large-centered">
         <div class="large-4 column">
           <%= image_tag "snipit.png" %>
@@ -91,45 +103,41 @@
         <div class="large-8 column fl">
         <br>
         <br>
-        <br>
-        <br>
           <h1 style="font-size: 4em;
-          margin-bottom: 0em;">Snipit</h1>
+          "><%= image_tag 'snipit-logo-grey.png' %></h1>
           <h1 class="subheader">
             Be there – even when you can’t. 
           </h1>
           <%= link_to "Sign up", new_admin_user_registration_path, class: "button primary medium white button-width" %>
+                    <h2 style="font-size:1.3em; color: #333;" class="subheader text-center">
+            Send your group text messages about new recipes, local events, discounts on healthy food or free fitness classes!
+          </h2>
         </div>
       </div>
     </div>
           <hr style="visibility: hidden;">
-    <div class="row">
+    <div class="row"  style="background: white !important; border-top: 8px solid rgb(204, 204, 204);">
     <div class="large-8 column large-centered">
           
-          <h2 style="font-size:1.3em; color: #333;" class="subheader text-center">
-            Send your group text messages about new recipes, local events, discounts on healthy food or free fitness classes!
-          </h2>
+
       <div class="large-4 column"><%= image_tag 'LINK-ICON.png', :class=> "height-same" %>
-          <h4 style="opacity: .8;">Connect</h4>
+          <h4 style="opacity: .8; font-size: 1.3em;">Connect</h4>
           <h5 class="subheader">Show them you care with regular text messages.</h5>
 
           </div>
       <div class="large-4 column"><%= image_tag 'POST-IT-ICON.png', :class=> "height-same" %>
-          <h4 style="opacity: .8;">Customize</h4>
+          <h4 style="opacity: .8; font-size: 1.3em;">Customize</h4>
           <h5 class="subheader">Send the right info at the right time.</h5>
 
          </div>
       <div class="large-4 column"> <%= image_tag 'MEGAPHONE-ICON.png', :class=> "height-same" %>
-          <h4 style="opacity: .8;">Coordinate</h4>
+          <h4 style="opacity: .8; font-size: 1.3em;">Coordinate</h4>
           <h5 class="subheader">Share valuable tips across multiple channels.</h5></div>
           <br><br><br>
   <hr style="visibility: hidden;">
       <%= link_to "Sign up now!", new_admin_user_registration_path, class: "button primary large white button-width" %>
     </div>
     </div>
-    <p>
-      
-    </p>
   <% end %> 
 </div>
 <div>
