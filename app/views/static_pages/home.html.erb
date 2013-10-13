@@ -5,27 +5,36 @@
     <br>
       <div class="large-9 column">
         <%= image_tag 'maps/feast-hack-map.png', :class => "feast" %>
-        <%= image_tag 'maps/astoria.png', :class => "astoria" %>
-        <%= image_tag 'maps/bronx-group.png', :class => "bronx" %>
-        <%= image_tag 'maps/central-harlem.png', :class => "central" %>
-        <%= image_tag 'maps/east-harlem.png', :class => "east" %>
-        <%= image_tag 'maps/flushing.png', :class => "flushing" %>
-        <%= image_tag 'maps/greenich-village.png', :class => "greenich" %>
-        <%= image_tag 'maps/highbridge.png', :class => "highbridge" %>
-        <%= image_tag 'maps/jackson-heights.png', :class => "jackson" %>
-        <%= image_tag 'maps/lower-east-side.png', :class => "lower" %>
-        <%= image_tag 'maps/morningside-heights.png', :class => "morningside" %>
-        <%= image_tag 'maps/mott-haven.png', :class => "mott" %>
-        <%= image_tag 'maps/north-manhattan-group.png', :class => "north" %>
-        <%= image_tag 'maps/pelham-parkway.png', :class => "pelham" %>
-        <%= image_tag 'maps/queens-group.png', :class => "queens" %>
-        <%= image_tag 'maps/soundview.png', :class => "soundview" %>
-        <%= image_tag 'maps/south-manhattan-group.png', :class => "south" %>
-        <%= image_tag 'maps/sunnyside.png', :class => "sunnyside" %>
-        <%= image_tag 'maps/throgs-neck.png', :class => "throgs" %>
-        <%= image_tag 'maps/washington-heights.png', :class => "washington" %>
+        <%= image_tag 'maps/astoria.png', :class => "astoria list-image" %>
+        <%= image_tag 'maps/bronx-group.png', :class => "bronx list-image" %>
+        <%= image_tag 'maps/central-harlem.png', :class => "central list-image" %>
+        <%= image_tag 'maps/east-harlem.png', :class => "east list-image" %>
+        <%= image_tag 'maps/flushing.png', :class => "flushing list-image" %>
+        <%= image_tag 'maps/greenich-village.png', :class => "greenich list-image" %>
+        <%= image_tag 'maps/highbridge.png', :class => "highbridge list-image" %>
+        <%= image_tag 'maps/jackson-heights.png', :class => "jackson list-image" %>
+        <%= image_tag 'maps/lower-east-side.png', :class => "lower list-image" %>
+        <%= image_tag 'maps/morningside-heights.png', :class => "morningside list-image" %>
+        <%= image_tag 'maps/mott-haven.png', :class => "mott list-image" %>
+        <%= image_tag 'maps/north-manhattan-group.png', :class => "north list-image" %>
+        <%= image_tag 'maps/pelham-parkway.png', :class => "pelham list-image" %>
+        <%= image_tag 'maps/queens-group.png', :class => "queens list-image" %>
+        <%= image_tag 'maps/soundview.png', :class => "soundview list-image" %>
+        <%= image_tag 'maps/south-manhattan-group.png', :class => "south list-image" %>
+        <%= image_tag 'maps/sunnyside.png', :class => "sunnyside list-image" %>
+        <%= image_tag 'maps/throgs-neck.png', :class => "throgs list-image" %>
+        <%= image_tag 'maps/washington-heights.png', :class => "washington list-image" %>
       </div>
       <style>
+        .list-image{
+          position: absolute;
+          left: 24px;
+          bottom: 0;
+          visibility: hidden;
+        }
+        .list-image.visibler{
+          visibility: visible;
+        }
         h5{
           margin-bottom:0em;
         }
@@ -40,130 +49,29 @@
           background: #ccc;
         }
       </style>
-      <script>
-$('.').hover( function(){
-  $('.feast').show(); 
-}, function(){
-  $('.feast').hide(); 
-});
-$('.').hover( function(){
-  $('.astoria').show(); 
-}, function(){
-  $('.astoria').hide(); 
-});
-$('.').hover( function(){
-  $('.bronx').show(); 
-}, function(){
-  $('.bronx').hide(); 
-});
-$('.').hover( function(){
-  $('.central').show(); 
-}, function(){
-  $('.central').hide(); 
-});
-$('.').hover( function(){
-  $('.east').show(); 
-}, function(){
-  $('.east').hide(); 
-});
-$('.').hover( function(){
-  $('.flushing').show(); 
-}, function(){
-  $('.flushing').hide(); 
-});
-$('.').hover( function(){
-  $('.greenich').show(); 
-}, function(){
-  $('.greenich').hide(); 
-});
-$('.').hover( function(){
-  $('.highbridge').show(); 
-}, function(){
-  $('.highbridge').hide(); 
-});
-$('.').hover( function(){
-  $('.jackson').show(); 
-}, function(){
-  $('.jackson').hide(); 
-});
-$('.').hover( function(){
-  $('.lower').show(); 
-}, function(){
-  $('.lower').hide(); 
-});
-$('.').hover( function(){
-  $('.morningside').show(); 
-}, function(){
-  $('.morningside').hide(); 
-});
-$('.').hover( function(){
-  $('.mott').show(); 
-}, function(){
-  $('.mott').hide(); 
-});
-$('.').hover( function(){
-  $('.north').show(); 
-}, function(){
-  $('.north').hide(); 
-});
-$('.').hover( function(){
-  $('.pelham').show(); 
-}, function(){
-  $('.pelham').hide(); 
-});
-$('.').hover( function(){
-  $('.queens').show(); 
-}, function(){
-  $('.queens').hide(); 
-});
-$('.').hover( function(){
-  $('.soundview').show(); 
-}, function(){
-  $('.soundview').hide(); 
-});
-$('.').hover( function(){
-  $('.south').show(); 
-}, function(){
-  $('.south').hide(); 
-});
-$('.').hover( function(){
-  $('.sunnyside').show(); 
-}, function(){
-  $('.sunnyside').hide(); 
-});
-$('.').hover( function(){
-  $('.throgs').show(); 
-}, function(){
-  $('.throgs').hide(); 
-});
-$('.').hover( function(){
-  $('.washington').show(); 
-}, function(){
-  $('.washington').hide(); 
-});
-      </script>
+   
       <div class="large-3 column text-left">
         <h4>Select your region</h4>
         <ul class="text-left no-bullet">
-          <li id="group"><h5>North Manhattan</h5></li>
-            <li class="EastHarlem">East Harlem</li>
-            <li class="CentralHarlem">Central Harlem</li>
-            <li class="WashingtonHeights">Washington Heights</li>
-            <li class="MorningsideHeights">Morningside Heights</li>
-          <li class="SouthManhattan" id="group"><h5>South Manhattan</h5></li>
-            <li class="FinancialDistrict">Greenich Village / Financial District</li>
-            <li class="Chinatown">Lower East Side / Chinatown</li>
-          <li class="Bronx</h5>" id="group"><h5>Bronx</h5></li>
-            <li class="Highbridge">Highbridge / South Concourse</li>
-            <li class="MottHaven">Mott Haven / Hunts Point</li>
-            <li class="Soundview">Soundview / Parkway</li>
-            <li class="Throg">Throg Neck / Co-Op City</li>
-            <li class="PelhamParkway">Pelham Parkway</li>
-          <li class="Queens</h5>" id="group"><h5>Queens</h5></li>
-            <li class="Astoria">Astoria</li>
-            <li class="JacksonHeights">Jackson Heights</li>
-            <li class="Sunnyside">Sunnyside / Woodside</li>
-            <li class="Flushing">Flushing / Whitestone</li>
+          <li id="gro up" class="list-north-manhattan"><h5>North Manhattan</h5></li>
+            <li class=" list-eastharlem">East Harlem</li>
+            <li class=" list-centralharlem">Central Harlem</li>
+            <li class=" list-washingtonheights">Washington Heights</li>
+            <li class=" list-morningsideheights">Morningside Heights</li>
+          <li class=" list-southmanhattan" id="group"><h5>South Manhattan</h5></li>
+            <li class=" list-financialdistrict">Greenich Village / Financial District</li>
+            <li class=" list-chinatown">Lower East Side / Chinatown</li>
+          <li class=" list-bronx" id="group"><h5>Bronx</h5></li>
+            <li class=" list-highbridge">Highbridge / South Concourse</li>
+            <li class=" list-motthaven">Mott Haven / Hunts Point</li>
+            <li class=" list-soundview">Soundview / Parkway</li>
+            <li class=" list-throg">Throg Neck / Co-Op City</li>
+            <li class=" list-pelhamparkway">Pelham Parkway</li>
+          <li class=" list-queens" id="group"><h5>Queens</h5></li>
+            <li class=" list-astoria">Astoria</li>
+            <li class=" list-jacksonheights">Jackson Heights</li>
+            <li class=" list-sunnyside">Sunnyside / Woodside</li>
+            <li class=" list-flushing">Flushing / Whitestone</li>
         </ul>
       </div>
     </div>
@@ -223,3 +131,101 @@ $('.').hover( function(){
 </div>
 <div>
 </div>
+   <script type="text/javascript">
+
+$('.list-astoria').hover( function(){
+  $('.astoria').addClass('visibler'); 
+}, function(){
+  $('.astoria').removeClass('visibler'); 
+});
+$('.list-bronx').hover( function(){
+  $('.bronx').addClass('visibler'); 
+}, function(){
+  $('.bronx').removeClass('visibler'); 
+});
+$('.list-centralharlem').hover( function(){
+  $('.central').addClass('visibler'); 
+}, function(){
+  $('.central').removeClass('visibler'); 
+});
+$('.list-eastharlem').hover( function(){
+  $('.east').addClass('visibler'); 
+}, function(){
+  $('.east').removeClass('visibler'); 
+});
+$('.list-flushing').hover( function(){
+  $('.flushing').addClass('visibler'); 
+}, function(){
+  $('.flushing').removeClass('visibler'); 
+});
+$('.list-financialdistrict').hover( function(){
+  $('.greenich').addClass('visibler'); 
+}, function(){
+  $('.greenich').removeClass('visibler'); 
+});
+$('.list-highbridge').hover( function(){
+  $('.highbridge').addClass('visibler'); 
+}, function(){
+  $('.highbridge').removeClass('visibler'); 
+});
+$('.list-jacksonheights').hover( function(){
+  $('.jackson').addClass('visibler'); 
+}, function(){
+  $('.jackson').removeClass('visibler'); 
+});
+$('.list-chinatown').hover( function(){
+  $('.lower').addClass('visibler'); 
+}, function(){
+  $('.lower').removeClass('visibler'); 
+});
+$('.list-morningsideheights').hover( function(){
+  $('.morningside').addClass('visibler'); 
+}, function(){
+  $('.morningside').removeClass('visibler'); 
+});
+$('.list-motthaven').hover( function(){
+  $('.mott').addClass('visibler'); 
+}, function(){
+  $('.mott').removeClass('visibler'); 
+});
+$('.list-north-manhattan').hover( function(){
+  $('.north').addClass('visibler'); 
+}, function(){
+  $('.north').removeClass('visibler'); 
+});
+$('.list-pelhamparkway').hover( function(){
+  $('.pelham').addClass('visibler'); 
+}, function(){
+  $('.pelham').removeClass('visibler'); 
+});
+$('.list-queens').hover( function(){
+  $('.queens').addClass('visibler'); 
+}, function(){
+  $('.queens').removeClass('visibler'); 
+});
+$('.list-soundview').hover( function(){
+  $('.soundview').addClass('visibler'); 
+}, function(){
+  $('.soundview').removeClass('visibler'); 
+});
+$('.list-southmanhattan').hover( function(){
+  $('.south').addClass('visibler'); 
+}, function(){
+  $('.south').removeClass('visibler'); 
+});
+$('.list-sunnyside').hover( function(){
+  $('.sunnyside').addClass('visibler'); 
+}, function(){
+  $('.sunnyside').removeClass('visibler'); 
+});
+$('.list-throg').hover( function(){
+  $('.throgs').addClass('visibler'); 
+}, function(){
+  $('.throgs').removeClass('visibler'); 
+});
+$('.list-washingtonheights').hover( function(){
+  $('.washington').addClass('visibler'); 
+}, function(){
+  $('.washington').removeClass('visibler'); 
+});
+      </script>
