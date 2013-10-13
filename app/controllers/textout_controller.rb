@@ -15,17 +15,26 @@ class TextoutController < ApplicationController
       
       # Create and send an SMS message
       friends = {
-        "+19493228496" => "Lenny",
-        "+15628823520" => "Matt",
-        "+19185763165" => "Jennings",
-        "+18482195617" => "Melody",
-        "+16465484196" => "Mik"
+        "+19493228496" => [
+          'name'=> 'Lenny'
+          ]
+        # ,"+15628823520" => "Matt",
+        # "+19185763165" => "Jennings",
+        # "+18482195617" => "Melody",
+        # "+16465484196" => "Mik",
+        # "+19174007014" => "Yvonne",
+        # "+19175860229" => "Donya",
+        # "+19175498582" => "Matylda",
+        # "+12017075074" => "Juan",
+        # "+16174709478" => "Jerri",
+        # "+12019825122" => "Ryan",
+        # "+16105858076" => "Matt"
       }
       friends.each do |key, value|
         client.account.sms.messages.create(
           :from => TWILIO_CONFIG['from'],
           :to => key,
-          :body => "Hey #{value}, Monkey party at 6PM. Bring Bananas!"
+          :body => "#{value}!, Welcome to SNIPIT. Bring Bananas!"
         ) 
         puts "Sent message to #{value}"
       end
