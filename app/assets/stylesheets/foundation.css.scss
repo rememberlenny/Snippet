@@ -26,8 +26,7 @@ body {
   color: #222222;
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;  font-weight: normal;
   font-style: normal;
   line-height: 1;
   position: relative;
@@ -1073,7 +1072,7 @@ p {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: inherit;
   font-weight: bold;
   font-style: normal;
   color: #222222;
@@ -1099,7 +1098,8 @@ h4 {
   font-size: 1.125em; }
 
 h5 {
-  font-size: 1.125em; }
+  font-size: 1.125em;
+  letter-spacing: 0.135em; }
 
 h6 {
   font-size: 1em; }
@@ -1151,7 +1151,7 @@ ul li ul,
 ul li ol {
   margin-left: 1.25em;
   margin-bottom: 0;
-  font-size: 1em;
+  font-size: 0.75em;
   /* Override nested font-size change */ }
 ul.square li ul, ul.circle li ul, ul.disc li ul {
   list-style: inherit; }
@@ -1245,7 +1245,7 @@ blockquote p {
     font-size: 1.6875em; }
 
   h4 {
-    font-size: 1.4375em; } }
+    font-size: 1em; } }
 /*
  * Print styles.
  *
@@ -4725,3 +4725,8 @@ a.th {
     max-width: 500px; }
   .f-dropdown.large {
     max-width: 800px; }
+
+.no-bullet li.list-eastharlem {
+    color: #0EC7C4;
+    letter-spacing: 0.135em;
+}
