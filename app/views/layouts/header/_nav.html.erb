@@ -11,19 +11,26 @@
   <section class="top-bar-section">
     <!-- Left Nav Section -->
     <ul class="left">
-
     </ul>
 
     <!-- Right Nav Section -->
     <ul class="right">
-      <li><%= link_to "Contact", help_path %></li>
       <% if admin_user_signed_in? %>
-        <li><%= link_to "Regional Selection", root_path %></li>
         <li><%= link_to "Subscribers", users_path %></li>
-        
-        <li><%= link_to "Log out", destroy_admin_user_session_path, method: :delete %></li>
+        <li class="divider"></li>
+        <li><%= link_to "Recipes", recipes_path %></li>
+        <li class="divider"></li>
+        <li><%= link_to "Recreational", recreations_path %></li>
+        <li class="divider"></li>
+        <li><%= link_to "Coupons", coupons_path %></li>
+        <li class="divider"></li>
+        <li><%= link_to "Logout", destroy_admin_user_session_path, method: :delete %></li>
       <% else %>
-        <li><%= link_to "Sign in", new_admin_user_session_path %></li>
+        <li><%= link_to "Contact", help_path %></li>
+        <li class="divider"></li>
+        <li><%= link_to "Sign Up", new_admin_user_registration_path %></li>
+        <li class="divider"></li>
+        <li><%= link_to "Login", new_admin_user_session_path %></li>
       <% end %>
     </ul>
   </section>
