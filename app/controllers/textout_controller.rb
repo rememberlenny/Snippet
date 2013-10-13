@@ -36,6 +36,34 @@ class TextoutController < ApplicationController
     end
   end
 
+  def lennytest
+    client = Twilio::REST::Client.new(TWILIO_CONFIG['sid'], TWILIO_CONFIG['token'])
+    @users       = User.where("id = 1", params[:id] )    
+    @recreations = Recreation.all
+    @recipes     = Recipe.all
+    @coupons     = Coupon.all
+    @users.each do |n|
+      puts n.firstname
+      @signedUp = ""
+      if(n.groupCoupon === "1")
+        @signedUp += " #COUPON"
+      end
+      if(n.groupRecreation === "1")
+        @signedUp += " #FITNESS"
+      end
+      if(n.groupRecipe == "1")
+        @signedUp += " #RECIPE"
+      end
+      @textMessage = n.firstname + "! Welcome to Snipit. Your coach signed you up for daily messages for" + @signedUp +  ". Reply STOP to halt messages."
+      client.account.sms.messages.create(
+        :from => TWILIO_CONFIG['from'],
+        :to => n.phoneNumber,
+        :body => @textMessage
+      ) 
+      puts "Sent message to " + n.firstname
+    end
+  end
+
   def sendtext
     client = Twilio::REST::Client.new(TWILIO_CONFIG['sid'], TWILIO_CONFIG['token'])
     # Instantiate a Twilio client

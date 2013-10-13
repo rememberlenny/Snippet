@@ -15,6 +15,7 @@ FeastHealth::Application.routes.draw do
   match '/signin',    to: 'static_pages#sign-in', via: 'get'
   
   match '/textout/index', to: 'textout#index',    via: 'get'
+  match '/textout/lenny', to: 'textout#lennytest',via: 'get'
   match '/voiceout',      to: 'textout#makecall', via: 'get'
   match '/textin',        to: 'textout#textin',   via: 'get'
   match '/textout',       to: 'textout#sendtext', via: 'get'
