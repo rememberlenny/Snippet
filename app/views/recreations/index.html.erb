@@ -18,9 +18,9 @@
         <td><%= recreation.name %></td>
         <td><%= recreation.address %></td>
         <td><%= recreation.info %></td>
-        <td><%= link_to 'Sh', recreation %></td>
-        <td><%= link_to 'Ed', edit_recreation_path(recreation) %></td>
-        <td><%= link_to 'De', recreation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', recreation %></td>
+        <td><%= link_to 'Edit', edit_recreation_path(recreation) %></td>
+        <td><%= link_to 'Delete', recreation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

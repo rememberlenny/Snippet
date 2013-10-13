@@ -22,9 +22,9 @@
         <td><%= user.groupRecreation %></td>
         <td><%= user.groupRecipe %></td>
         <td><%= user.groupCoupon %></td>
-        <td><%= link_to 'Sh', user %></td>
-        <td><%= link_to 'Ed', edit_user_path(user) %></td>
-        <td><%= link_to 'De', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
