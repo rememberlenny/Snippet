@@ -1,4 +1,6 @@
 FeastHealth::Application.routes.draw do
+  resources :coupons
+
   devise_for :admin_users
   resources :recreations
 

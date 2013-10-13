@@ -1,15 +1,34 @@
-
-<div class="main-hero">
+<script>
+  $('.white-bg').removeClass('white-bg');
+</script>
+<div class="main-hero text-center">
   <% if admin_user_signed_in? %>
 
   <% else %>
-    <h1 style="font-size: 3em">Snippet</h1>
+    <h1 style="font-size: 3em; margin-bottom: 0em;">Snippet</h1>
     <h1 class="subheader">
-      One liner goes here.
+      Keeping families connected to coaches. 
     </h1>
     <p>
-     <%= link_to "Log in", new_admin_user_session_path, class: "button secondary large" %>
-     <%= link_to "Sign up", new_admin_user_registration_path, class: "button primary large white" %>
+      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+        <div><%= f.label :email %>
+        <%= f.email_field :email, :autofocus => true %></div>
+
+        <div><%= f.label :password %>
+        <%= f.password_field :password %></div>
+
+       <!--  <% if devise_mapping.rememberable? -%>
+          <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+        <% end -%> -->
+
+        <div><%= f.submit :class => 'button' "Sign in" %></div>
+      <% end %>
+      <%= link_to "Sign up", new_admin_user_registration_path, class: "button primary large white" %>
     </p>
   <% end %> 
+</div>
+<div>
+  <h2 class="subheader">
+    Send your group text messages about new recipes, local events, discounts on healthy food or free fitness classes!
+  </h2>
 </div>
