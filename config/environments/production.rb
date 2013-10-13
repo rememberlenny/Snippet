@@ -79,4 +79,8 @@ FeastHealth::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   config.action_mailer.default_url_options = { :host => 'http://snipit.herokuapp.com/' }
+
+  TWILIO_ACCOUNT_SID  = ENV['TWILIO_ACCOUNT_SID']
+  TWILIO_AUTH_TOKEN   = ENV['TWILIO_AUTH_TOKEN']
+  TWILIO_NUMBER       = 16465027647
 end

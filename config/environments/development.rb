@@ -28,4 +28,8 @@ FeastHealth::Application.configure do
   config.assets.debug = true
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  TWILIO_ACCOUNT_SID  = ENV['TWILIO_ACCOUNT_SID']
+  TWILIO_AUTH_TOKEN   = ENV['TWILIO_AUTH_TOKEN']
+  TWILIO_NUMBER       = 16465027647
 end
