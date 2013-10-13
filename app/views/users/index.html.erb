@@ -1,4 +1,10 @@
 <h1>Subscribers in East Harlem</h1>
+<a href="#" class="button large suicide-button">Send all</a>
+<script>
+  $('.suicide-button').on('click', function(){
+    $.get('http://snipit.herokuapp.com/textout/index');
+  });
+</script>
 
 <table>
   <thead>
