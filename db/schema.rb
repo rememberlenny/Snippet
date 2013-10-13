@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131013002520) do
+ActiveRecord::Schema.define(version: 20131013020706) do
 
   create_table "admin_users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -37,6 +37,18 @@ ActiveRecord::Schema.define(version: 20131013002520) do
     t.string   "address"
     t.string   "item"
     t.string   "when"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "recipes", force: true do |t|
+    t.string   "dishType"
+    t.string   "dish"
+    t.string   "ingredientsSimplified"
+    t.string   "ingredients"
+    t.string   "nutrition"
+    t.string   "directions"
+    t.string   "serves"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

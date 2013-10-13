@@ -1,12 +1,15 @@
 FeastHealth::Application.routes.draw do
-  resources :coupons
-
-  devise_for :admin_users
-  resources :recreations
-
-  resources :users
+  
+  resources :recipes
 
   root 'static_pages#home'
+  
+  devise_for :admin_users
+  
+  resources :coupons
+  resources :recreations
+  resources :users
+
   match '/home',    to: 'static_pages#home', via: 'get'
   match '/help',    to: 'static_pages#help', via: 'get'
   match '/signin',  to: 'static_pages#sign-in', via: 'get'

@@ -2,7 +2,7 @@
   <ul class="title-area">
     <!-- Title Area -->
     <li class="name">
-      <h1><%= link_to "Snippet", home_path %></h1>
+      <h1><%= link_to "Snipit | East Harlem", home_path %></h1>
     </li>
     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -16,9 +16,11 @@
 
     <!-- Right Nav Section -->
     <ul class="right">
-      <li><%= link_to "Home", home_path %></li>
-      <li><%= link_to "Help", help_path %></li>
+      <li><%= link_to "Contact", help_path %></li>
       <% if admin_user_signed_in? %>
+        <li><%= link_to "Regional Selection", root_path %></li>
+        <li><%= link_to "Subscribers", users_path %></li>
+        
         <li><%= link_to "Log out", destroy_admin_user_session_path, method: :delete %></li>
       <% else %>
         <li><%= link_to "Sign in", new_admin_user_session_path %></li>

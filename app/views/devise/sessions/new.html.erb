@@ -1,17 +1,32 @@
-<h2>Sign in</h2>
+<script>
+  $('.white-bg').removeClass('white-bg');
+</script>
+<div class="main-hero text-center">
+  <% if admin_user_signed_in? %>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %>
-  <%= f.email_field :email, :autofocus => true %></div>
+  <% else %>
+    <h1 style="font-size: 4em; margin-bottom: 0em;">Snippet</h1>
+    <h1 class="subheader">
+      Keeping families connected to coaches. 
+    </h1>
+    <p>
+      
+     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+      <div class="large-6 large-centered column" style="font-size:2em;">
+      <%= f.email_field :email, :placeholder => "Email", :autofocus => true %></div>
 
-  <div><%= f.label :password %>
-  <%= f.password_field :password %></div>
+      <div class="large-6 large-centered column" style="font-size:2em;">
+      <%= f.password_field :password, :placeholder => "Password" %></div>
 
- <!--  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%> -->
+     <!--  <% if devise_mapping.rememberable? -%>
+        <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+      <% end -%> -->
 
-  <div><%= f.submit :class => 'button' "Sign in" %></div>
-<% end %>
+      <div class="large-6 large-centered column" style="font-size:1.4em;">
+      <%= f.submit "Sign in",  :class => 'button full-width' %></div>
+    <% end %>
+    </p>
+  <% end %> 
+</div>
 
-<%= render "devise/shared/links" %>
+

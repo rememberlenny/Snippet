@@ -1,22 +1,40 @@
-<script>
-  $('.white-bg').removeClass('white-bg');
-</script>
+
 <div class="main-hero text-center">
   <% if admin_user_signed_in? %>
-
+    <div class="row">
+    <br>
+      <div class="large-9 column">
+        <%= image_tag 'maps/feast-hack-map.png' %>
+      </div>
+      <div class="large-3 column">
+        <h4>Select your region</h4>
+      </div>
+    </div>
+    <br>
   <% else %>
-    <h1 style="font-size: 3em; margin-bottom: 0em;">Snippet</h1>
-    <h1 class="subheader">
-      Keeping families connected to coaches. 
-    </h1>
+    <script>
+      $('.white-bg').removeClass('white-bg');
+    </script>
+    <div class="row">
+      <div class="large-6 column">
+        <%= image_tag "snipit.png" %>
+      </div>
+      <div class="large-6 column">
+        <h1 style="font-size: 4em;
+        margin-bottom: 0em;">Snippet</h1>
+        <h1 class="subheader">
+          Keeping families connected to coaches. 
+        </h1>
+        <%= link_to "Sign up", new_admin_user_registration_path, class: "button primary large white button-width" %>
+        <p class="subheader text-center">
+        Send your group text messages about new recipes, local events, discounts on healthy food or free fitness classes!
+        </p>
+      </div>
+    </div>
     <p>
       
-     <%= link_to "Sign up", new_admin_user_registration_path, class: "button primary large white" %>
     </p>
   <% end %> 
 </div>
 <div>
-  <h2 class="subheader">
-    Send your group text messages about new recipes, local events, discounts on healthy food or free fitness classes!
-  </h2>
 </div>

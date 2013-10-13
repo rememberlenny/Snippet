@@ -99,7 +99,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 62.5em;
+  max-width: 82.5em;
   *zoom: 1; }
   .row:before, .row:after {
     content: " ";
@@ -2847,7 +2847,7 @@ label.error {
   height: 45px;
   line-height: 45px;
   position: relative;
-  background: #111111;
+  background: #fff !important;
   margin-bottom: 0; }
   .top-bar ul {
     margin-bottom: 0;
@@ -2876,7 +2876,7 @@ label.error {
       margin: 0; }
       .top-bar .name h1 a {
         font-weight: bold;
-        color: white;
+        color: black;
         width: 50%;
         display: block;
         padding: 0 15px; }
@@ -2885,7 +2885,7 @@ label.error {
     right: 0;
     top: 0; }
     .top-bar .toggle-topbar a {
-      color: white;
+      color: black;
       text-transform: uppercase;
       font-size: 0.8125em;
       font-weight: bold;
@@ -2905,7 +2905,7 @@ label.error {
         height: 34px;
         line-height: 33px;
         padding: 0;
-        color: white; }
+        color: black; }
         .top-bar .toggle-topbar.menu-icon a span {
           position: absolute;
           right: 0;
@@ -2936,7 +2936,7 @@ label.error {
     width: 100%;
     height: auto;
     display: block;
-    background: #222222;
+    background: #fff;
     font-size: 16px;
     margin: 0; }
   .top-bar-section .divider,
@@ -2949,37 +2949,37 @@ label.error {
   .top-bar-section ul li > a {
     display: block;
     width: 100%;
-    color: white;
+    color: black;
     padding: 12px 0 12px 0;
     padding-left: 15px;
     font-size: 0.8125em;
     font-weight: bold;
-    background: #222222; }
+    background: #fff; }
     .top-bar-section ul li > a.button {
-      background: #2ba6cb;
+      background: #fff;
       font-size: 0.8125em;
       padding-right: 15px;
       padding-left: 15px; }
       .top-bar-section ul li > a.button:hover {
-        background: #2284a1; }
+        background: #fff; }
     .top-bar-section ul li > a.button.secondary {
-      background: #e9e9e9; }
+      background: #fff; }
       .top-bar-section ul li > a.button.secondary:hover {
-        background: #d0d0d0; }
+        background: #fff; }
     .top-bar-section ul li > a.button.success {
-      background: #5da423; }
+      background: #fff; }
       .top-bar-section ul li > a.button.success:hover {
-        background: #457a1a; }
+        background: #fff; }
     .top-bar-section ul li > a.button.alert {
-      background: #c60f13; }
+      background: #fff; }
       .top-bar-section ul li > a.button.alert:hover {
-        background: #970b0e; }
+        background: #fff; }
   .top-bar-section ul li:hover > a {
-    background: black;
-    color: white; }
+    background: #fff;
+    color: black; }
   .top-bar-section ul li.active > a {
-    background: #090909;
-    color: white; }
+    background: #fff;
+    color: black; }
   .top-bar-section .has-form {
     padding: 15px; }
   .top-bar-section .has-dropdown {
@@ -3038,7 +3038,7 @@ label.error {
 
 @media only screen and (min-width: 940px) {
   .top-bar {
-    background: #111111;
+    background: #fff;
     *zoom: 1;
     overflow: visible; }
     .top-bar:before, .top-bar:after {
@@ -3061,7 +3061,7 @@ label.error {
       position: relative;
       top: 8px; }
     .top-bar.expanded {
-      background: #111111; }
+      background: #fff; }
 
   .contain-to-grid .top-bar {
     max-width: 62.5em;
@@ -3087,9 +3087,9 @@ label.error {
     .top-bar-section li a:not(.button) {
       padding: 0 15px;
       line-height: 45px;
-      background: #111111; }
+      background: #fff; }
       .top-bar-section li a:not(.button):hover {
-        background: black; }
+        background: #fff; }
     .top-bar-section .has-dropdown > a {
       padding-right: 35px !important; }
       .top-bar-section .has-dropdown > a:after {
@@ -3120,14 +3120,14 @@ label.error {
       background: transparent;
       min-width: 100%; }
       .top-bar-section .dropdown li a {
-        color: white;
+        color: black;
         line-height: 1;
         white-space: nowrap;
         padding: 7px 15px;
-        background: #1e1e1e; }
+        background: #fff; }
       .top-bar-section .dropdown li label {
         white-space: nowrap;
-        background: #1e1e1e; }
+        background: #fff; }
       .top-bar-section .dropdown li .dropdown {
         left: 100%;
         top: 0; }

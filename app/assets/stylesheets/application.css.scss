@@ -11,11 +11,26 @@
  *= require_self
  *= require_tree .
  */
-
+ h1,
+ h2,
+ h3,
+ h4,
+ h5{
+ font-family: Georgia !important;
+ }
 .background{
   background-image: url(image_path('background.jpg')) !important;
   background-size: cover !important;
   padding-bottom: 2em;
+  border-top: 8px solid rgb(148, 204, 203);
+  border-bottom: 8px solid rgb(204, 204, 204);
+  min-height: 500px
+}
+.footer{
+  color: #888!important;
+  p, a{
+    color: #888!important;
+  }
 }
 .white-bg{
   background: rgba(255, 255, 255, 0.66);
@@ -23,7 +38,16 @@
   padding-right: 2em;
   padding-bottom: 1em;
 }
-
+.full-width{
+  width: 100%;
+  font-size: 1em !important;
+  width: 96%;
+  margin: 0 auto;
+  text-align: center;
+}
+.button-width{
+  width: 55%;
+}
 .fr{
   float: right;
 }
