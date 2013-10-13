@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131013023723) do
+ActiveRecord::Schema.define(version: 20131013024647) do
 
   create_table "admin_users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -32,35 +32,35 @@ ActiveRecord::Schema.define(version: 20131013023723) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
   create_table "coupons", force: true do |t|
-    t.string   "name"
-    t.string   "location"
-    t.string   "address"
-    t.string   "item"
-    t.string   "when"
+    t.text     "name"
+    t.text     "location"
+    t.text     "address"
+    t.text     "item"
+    t.text     "when"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "recipes", force: true do |t|
-    t.string   "dishType"
-    t.string   "dish"
-    t.string   "ingredientsSimplified"
-    t.string   "ingredients"
-    t.string   "nutrition"
-    t.string   "directions"
-    t.string   "serves"
+    t.text     "dishType"
+    t.text     "dish"
+    t.text     "ingredientsSimplified"
+    t.text     "ingredients"
+    t.text     "nutrition"
+    t.text     "directions"
+    t.text     "serves"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "recreations", force: true do |t|
-    t.string   "name"
-    t.string   "location"
-    t.string   "address"
-    t.string   "audience"
-    t.string   "info"
-    t.string   "days"
-    t.string   "timeOfDay"
+    t.text     "name"
+    t.text     "location"
+    t.text     "address"
+    t.text     "audience"
+    t.text     "info"
+    t.text     "days"
+    t.text     "timeOfDay"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
