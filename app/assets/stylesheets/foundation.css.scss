@@ -2953,7 +2953,7 @@ label.error {
     padding: 12px 0 12px 0;
     padding-left: 15px;
     font-size: 0.8125em;
-    font-weight: bold;
+    font-weight: none;
     background: #fff; }
     .top-bar-section ul li > a.button {
       background: #fff;
@@ -3085,9 +3085,12 @@ label.error {
       background: white;
       color: black; }
     .top-bar-section li a:not(.button) {
-      padding: 0 15px;
-      line-height: 45px;
-      background: #fff; }
+      padding: 0 17px;
+      line-height: 71px;
+      background: #94CCCB;
+      letter-spacing: 0.135em;
+      color: #FFF;
+    }
       .top-bar-section li a:not(.button):hover {
         background: #ddd; }
     .top-bar-section .has-dropdown > a {
